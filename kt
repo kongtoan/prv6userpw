@@ -27,7 +27,7 @@ install_3proxy() {
     cd $WORKDIR
 }
 download_proxy() {
-cd /home/cloudfly
+cd /home/kongtoan
 curl -F "file=@proxy.txt" https://file.io
 }
 gen_3proxy() {
@@ -92,8 +92,8 @@ yum -y install wget gcc net-tools bsdtar zip >/dev/null
 
 install_3proxy
 
-echo "working folder = /home/cloudfly"
-WORKDIR="/home/cloudfly"
+echo "working folder = /home/kongtoan"
+WORKDIR="/home/kongtoan"
 WORKDATA="${WORKDIR}/data.txt"
 mkdir $WORKDIR && cd $_
 
@@ -112,7 +112,7 @@ while :; do
     echo "Number out of range, try again"
   fi
 done
-LAST_PORT=$(($FIRST_PORT + 999))
+LAST_PORT=$(($FIRST_PORT + 1199))
 echo "LAST_PORT is $LAST_PORT. Continue..."
 
 gen_data >$WORKDIR/data.txt
